@@ -26,8 +26,8 @@ tables_data = {
     'chef': '/data/parmalat_focus_miglioramento_chef.csv',
     'zymil': '/data/parmalat_focus_miglioramento_zymil.csv',
     'santal': '/data/parmalat_focus_miglioramento_santal.csv',
-    'cluster1': '/data/parmalat_focus_cluster1.csv',
-    'cluster2': '/data/parmalat_focus_cluster2.csv'
+    'cluster1': '/data/parmalat_cluster1.csv',
+    'cluster2': '/data/parmalat_cluster2.csv'
 }
 
 mesi = trafficoOrganico2425["Mese"].tolist()
