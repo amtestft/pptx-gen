@@ -10,7 +10,7 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 import pandas as pd
 
-template = "/data/template"
+template = "/data/template_parmalat"
 font_standard = "Gotham HTF"
 font_light = "Gotham HTF Light" 
 font_medium = "Gotham HTF Medium"
