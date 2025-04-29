@@ -17,17 +17,17 @@ font_medium = "Gotham HTF Medium"
 
 prs = Presentation(template)
 
-content2023 = pd.read_csv("/data/content2023.csv")
-content2024 = pd.read_csv("/data/content2024.csv")
-trafficoOrganico2425 = pd.read_csv("/data/traffico_organico_clic2425.csv")
+content2023 = pd.read_csv("/data/parmalat_content2023.csv")
+content2024 = pd.read_csv("/data/parmalat_content2024.csv")
+trafficoOrganico2425 = pd.read_csv("/data/parmalat_traffico_organico_clic2425.csv")
 trafficoOrganico2425 = trafficoOrganico2425.fillna("")
 tables_data = {
-    'parmalat': '/data/focus_miglioramento_parmalat.csv',
-    'chef': '/data/focus_miglioramento_chef.csv',
-    'zymil': '/data/focus_miglioramento_zymil.csv',
-    'santal': '/data/focus_miglioramento_santal.csv',
-    'cluster1': '/data/focus_cluster1.csv',
-    'cluster2': '/data/focus_cluster2.csv'
+    'parmalat': '/data/parmalat_focus_miglioramento_parmalat.csv',
+    'chef': '/data/parmalat_focus_miglioramento_chef.csv',
+    'zymil': '/data/parmalat_focus_miglioramento_zymil.csv',
+    'santal': '/data/parmalat_focus_miglioramento_santal.csv',
+    'cluster1': '/data/parmalat_focus_cluster1.csv',
+    'cluster2': '/data/parmalat_focus_cluster2.csv'
 }
 
 mesi = trafficoOrganico2425["Mese"].tolist()
