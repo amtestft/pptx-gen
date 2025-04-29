@@ -426,9 +426,9 @@ def insert_image(slide, image_path, left_cm=2, top_cm=2, width_cm=None, height_c
 
 
 img_paths = {
-    'focus1': 'focus1.png',
-    'focus2': 'focus2.png',
-    'focus3': 'focus3.png'
+    'focus1': '/data/focus1.png',
+    'focus2': '/data/focus2.png',
+    'focus3': '/data/focus3.png'
 }
 
 
