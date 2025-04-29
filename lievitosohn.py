@@ -9,7 +9,7 @@ from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 import pandas as pd
 
-template = "/data/template"
+template = "/data/ls_template"
 
 font_standard = "Gotham HTF"
 font_light = "Gotham HTF Light" 
@@ -17,7 +17,7 @@ font_medium = "Gotham HTF Medium"
 
 obiettivo_2024 = "149.700"
 
-trafficAllSources = pd.read_csv("/data/traffic_all_sources.csv")
+trafficAllSources = pd.read_csv("/data/ls_traffic_all_sources.csv")
 mesi = trafficAllSources["Mese"].tolist()
 organic = trafficAllSources["Organic"].tolist()
 other = trafficAllSources["Other"].tolist()
@@ -30,7 +30,7 @@ chart_data.add_series("Other", other)
 chart_data.add_series("Paid", paid)
 
 # Prepara dati per il grafico
-clic_df = pd.read_csv("/data/clic_organici.csv")
+clic_df = pd.read_csv("/data/ls_clic_organici.csv")
 clic_data = CategoryChartData()
 clic_data.categories = clic_df["Mese"]
 clic_data.add_series("2023", clic_df["2023"])
@@ -597,25 +597,25 @@ slide_idxs = [6, 7, 8, 9]
 slides_data = [
     {
         "title": "TOP MICRO-MOMENTS - BRAND",
-        "data_path": "/data/topmm_brand.csv",
+        "data_path": "/data/ls_topmm_brand.csv",
         "rework_flag": False,
         "rows_reworked": []
     },
     {
         "title": "TOP MICRO-MOMENTS – PRODOTTO",
-        "data_path": "/data/topmm_prodotto.csv",
+        "data_path": "/data/ls_topmm_prodotto.csv",
         "rework_flag": False,
         "rows_reworked": []
     },
     {
         "title": "TOP MICRO-MOMENTS – STATI DI BISOGNO",
-        "data_path": "/data/topmm_needs.csv",
+        "data_path": "/data/ls_topmm_needs.csv",
         "rework_flag": True,
         "rows_reworked": [0, 2, 3]
     },
     {
         "title": "BEST VOLUME MICRO-MOMENTS",
-        "data_path": "/data/best_vol_mm.csv",
+        "data_path": "/data/ls_best_vol_mm.csv",
         "rework_flag": True,
         "rows_reworked": [2, 4]
     }
