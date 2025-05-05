@@ -522,8 +522,14 @@ def add_mm_slides(prs, slide_indices, slides_data):
                 para.font.bold = False
 
                 # Sfondo bianco
-                cell.fill.solid()
-                cell.fill.fore_color.rgb = RGBColor(255, 255, 255)
+                # Colore di sfondo alternato
+                if row_idx % 2 == 0:
+                    cell.fill.solid()
+                    cell.fill.fore_color.rgb = RGBColor(0xEB, 0xF1, 0xE9)  # EBF1E9
+                else:
+                    cell.fill.solid()
+                    cell.fill.fore_color.rgb = RGBColor(255, 255, 255)     # Bianco
+
 
                 # Allineamento
                 if col_idx == 0:
