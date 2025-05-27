@@ -22,9 +22,9 @@ dpa_table_data = pd.read_csv(f"{files_folder}/nhco_dpa_tabella.csv")
 dpa_impression_grafico_data = pd.read_csv(f"{files_folder}/nhco_dpa_impression_grafico.csv")
 dpa_viewability_grafico_data = pd.read_csv(f"{files_folder}/nhco_dpa_viewability_grafico.csv")
 
-vpa_table_data = pd.read_csv(f"{files_folder}/nhco_vpa_tabella.csv")
-vpa_impression_grafico_data = pd.read_csv(f"{files_folder}/nhco_vpa_impression_grafico.csv")
-vpa_completion_grafico_data = pd.read_csv(f"{files_folder}/nhco_vpa_completion_grafico.csv")
+#vpa_table_data = pd.read_csv(f"{files_folder}/nhco_vpa_tabella.csv")
+#vpa_impression_grafico_data = pd.read_csv(f"{files_folder}/nhco_vpa_impression_grafico.csv")
+#vpa_completion_grafico_data = pd.read_csv(f"{files_folder}/nhco_vpa_completion_grafico.csv")
 
 from pptx.oxml import parse_xml
 from pptx.oxml.ns import qn
