@@ -281,4 +281,5 @@ add_dpa_chart(dpa_viewability_grafico_data, slides[3], chart_type="viewability")
 #add_dpa_chart(vpa_impression_grafico_data, slides[5], chart_type="impression_video")
 #add_dpa_chart(vpa_completion_grafico_data, slides[5], chart_type="completion")
 
-prs.save("nhco_output_presentazione_con_dati.pptx")
+prs.save(f"{files_folder}/nhco_output_presentazione_con_dati.pptx")
+
