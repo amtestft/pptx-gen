@@ -9,7 +9,7 @@ from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 import pandas as pd
 
-files_folder = "n8n-files/"
+files_folder = "/files"
 template = f"{files_folder}NHCO_template.pptx"
 
 font_standard = "Gotham HTF"
