@@ -9,6 +9,17 @@ from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 import pandas as pd
 
+
+def load_clean_csv(path):
+    df = pd.read_csv(path)
+    if "row_number" in df.columns:
+        df = df.drop(columns=["row_number"])
+    return df
+
+font_standard = "Gotham HTF"
+font_light = "Gotham HTF Light" 
+font_medium = "Gotham HTF Medium"
+
 files_folder = "/files"
 template = f"{files_folder}/NHCO_template.pptx"
 
@@ -16,15 +27,16 @@ font_standard = "Gotham HTF"
 font_light = "Gotham HTF Light" 
 font_medium = "Gotham HTF Medium"
 
-timing_media_spending_data = pd.read_csv(f"{files_folder}/nhco_timing_media_spending.csv")
+timing_media_spending_data = load_clean_csv(f"{files_folder}/nhco_timing_media_spending.csv")
+dpa_table_data = load_clean_csv(f"{files_folder}/nhco_dpa_tabella.csv")
+dpa_impression_grafico_data = load_clean_csv(f"{files_folder}/nhco_dpa_impression_grafico.csv")
+dpa_viewability_grafico_data = load_clean_csv(f"{files_folder}/nhco_dpa_viewability_grafico.csv")
 
-dpa_table_data = pd.read_csv(f"{files_folder}/nhco_dpa_tabella.csv")
-dpa_impression_grafico_data = pd.read_csv(f"{files_folder}/nhco_dpa_impression_grafico.csv")
-dpa_viewability_grafico_data = pd.read_csv(f"{files_folder}/nhco_dpa_viewability_grafico.csv")
+# da attivare
+# vpa_table_data = load_clean_csv(f"{files_folder}/nhco_vpa_tabella.csv")
+# vpa_impression_grafico_data = load_clean_csv(f"{files_folder}/nhco_vpa_impression_grafico.csv")
+# vpa_completion_grafico_data = load_clean_csv(f"{files_folder}/nhco_vpa_completion_grafico.csv")
 
-#vpa_table_data = pd.read_csv(f"{files_folder}/nhco_vpa_tabella.csv")
-#vpa_impression_grafico_data = pd.read_csv(f"{files_folder}/nhco_vpa_impression_grafico.csv")
-#vpa_completion_grafico_data = pd.read_csv(f"{files_folder}/nhco_vpa_completion_grafico.csv")
 
 from pptx.oxml import parse_xml
 from pptx.oxml.ns import qn
