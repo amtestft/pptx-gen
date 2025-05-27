@@ -32,10 +32,9 @@ dpa_table_data = load_clean_csv(f"{files_folder}/nhco_dpa_tabella.csv")
 dpa_impression_grafico_data = load_clean_csv(f"{files_folder}/nhco_dpa_impression_grafico.csv")
 dpa_viewability_grafico_data = load_clean_csv(f"{files_folder}/nhco_dpa_viewability_grafico.csv")
 
-# da attivare
-# vpa_table_data = load_clean_csv(f"{files_folder}/nhco_vpa_tabella.csv")
-# vpa_impression_grafico_data = load_clean_csv(f"{files_folder}/nhco_vpa_impression_grafico.csv")
-# vpa_completion_grafico_data = load_clean_csv(f"{files_folder}/nhco_vpa_completion_grafico.csv")
+vpa_table_data = load_clean_csv(f"{files_folder}/nhco_vpa_tabella.csv")
+vpa_impression_grafico_data = load_clean_csv(f"{files_folder}/nhco_vpa_impression_grafico.csv")
+vpa_completion_grafico_data = load_clean_csv(f"{files_folder}/nhco_vpa_completion_grafico.csv")
 
 
 from pptx.oxml import parse_xml
@@ -277,9 +276,9 @@ fill_timing_media_spending_table(slides[2], timing_media_spending_data)
 fill_programmatic_table(slides[3], dpa_table_data)
 add_dpa_chart(dpa_impression_grafico_data, slides[3], chart_type="impression")
 add_dpa_chart(dpa_viewability_grafico_data, slides[3], chart_type="viewability")
-#fill_programmatic_table(slides[5], vpa_table_data)
-#add_dpa_chart(vpa_impression_grafico_data, slides[5], chart_type="impression_video")
-#add_dpa_chart(vpa_completion_grafico_data, slides[5], chart_type="completion")
+fill_programmatic_table(slides[5], vpa_table_data)
+add_dpa_chart(vpa_impression_grafico_data, slides[5], chart_type="impression_video")
+add_dpa_chart(vpa_completion_grafico_data, slides[5], chart_type="completion")
 
 prs.save(f"{files_folder}/nhco_output_presentazione_con_dati.pptx")
 
