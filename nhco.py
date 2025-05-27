@@ -10,7 +10,7 @@ from pptx.enum.shapes import MSO_SHAPE
 import pandas as pd
 
 files_folder = "/files"
-template = f"{files_folder}NHCO_template.pptx"
+template = f"{files_folder}/NHCO_template.pptx"
 
 font_standard = "Gotham HTF"
 font_light = "Gotham HTF Light" 
