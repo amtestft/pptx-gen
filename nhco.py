@@ -81,6 +81,12 @@ def fill_timing_media_spending_table(slide, data):
         raise ValueError("Nessuna tabella trovata nella slide.")
     
     # Inserisci i dati nelle celle della tabella
+    if len(table.rows) < len(data) + 1:
+        raise ValueError(f"La tabella ha solo {len(table.rows)} righe, ma i dati richiedono {len(data) + 1} righe.")
+
+    if len(table.columns) < len(data.columns):
+        raise ValueError(f"La tabella ha solo {len(table.columns)} colonne, ma i dati richiedono {len(data.columns)} colonne.")
+
     for i, row in data.iterrows():
         for j, value in enumerate(row):
             cell = table.cell(i + 1, j)  # +1 perché riga 0 è intestazione
